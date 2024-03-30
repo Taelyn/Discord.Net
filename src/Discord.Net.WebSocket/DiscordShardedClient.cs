@@ -515,6 +515,11 @@ namespace Discord.WebSocket
             client.GuildScheduledEventUserAdd += (arg1, arg2) => _guildScheduledEventUserAdd.InvokeAsync(arg1, arg2);
             client.GuildScheduledEventUserRemove += (arg1, arg2) => _guildScheduledEventUserRemove.InvokeAsync(arg1, arg2);
 
+            client.AutoModActionExecuted += (arg1, arg2, arg3) => _autoModActionExecuted.InvokeAsync(arg1, arg2, arg3);
+            client.AutoModRuleCreated += (arg1) => _autoModRuleCreated.InvokeAsync(arg1);
+            client.AutoModRuleDeleted += (arg1) => _autoModRuleDeleted.InvokeAsync(arg1);
+            client.AutoModRuleUpdated += (arg1, arg2) => _autoModRuleUpdated.InvokeAsync(arg1, arg2);
+
             client.WebhooksUpdated += (arg1, arg2) => _webhooksUpdated.InvokeAsync(arg1, arg2);
             client.AuditLogCreated += (arg1, arg2) => _auditLogCreated.InvokeAsync(arg1, arg2);
 
