@@ -524,6 +524,11 @@ namespace Discord.WebSocket
             client.EntitlementUpdated += (arg1, arg2) => _entitlementUpdated.InvokeAsync(arg1, arg2);
             client.EntitlementDeleted += (arg1) => _entitlementDeleted.InvokeAsync(arg1);
 
+            client.AutoModActionExecuted += (arg1, arg2, arg3) => _autoModActionExecuted.InvokeAsync(arg1, arg2, arg3);
+            client.AutoModRuleCreated += (arg1) => _autoModRuleCreated.InvokeAsync(arg1);
+            client.AutoModRuleDeleted += (arg1) => _autoModRuleDeleted.InvokeAsync(arg1);
+            client.AutoModRuleUpdated += (arg1, arg2) => _autoModRuleUpdated.InvokeAsync(arg1, arg2);
+
             client.PollVoteAdded += (arg1, arg2, arg3, arg4, arg5) => _pollVoteAdded.InvokeAsync(arg1, arg2, arg3, arg4, arg5);
             client.PollVoteRemoved += (arg1, arg2, arg3, arg4, arg5) => _pollVoteRemoved.InvokeAsync(arg1, arg2, arg3, arg4, arg5);
         }
