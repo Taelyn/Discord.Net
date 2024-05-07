@@ -35,7 +35,7 @@ namespace Discord
         ///     the version fails to be fetched.
         /// </returns>
         public static string Version { get; } =
-            typeof(DiscordConfig).GetTypeInfo().Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ??
+            //typeof(DiscordConfig).GetTypeInfo().Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ??
             typeof(DiscordConfig).GetTypeInfo().Assembly.GetName().Version.ToString(3) ??
             "Unknown";
 
