@@ -237,6 +237,16 @@ namespace Discord
         AutoModerationUserCommunicationDisabled = 145,
 
         /// <summary>
+        ///     Creator monetization request was created.
+        /// </summary>
+        CreatorMonetizationRequestCreated = 150,
+
+        /// <summary>
+        ///     Creator monetization terms were accepted.
+        /// </summary>
+        CreatorMonetizationTermsAccepted,
+
+        /// <summary>
         ///     Guild Onboarding Question was created.
         /// </summary>
         OnboardingQuestionCreated = 163,
@@ -247,9 +257,29 @@ namespace Discord
         OnboardingQuestionUpdated = 164,
 
         /// <summary>
+        ///     Guild Onboarding was deleted.
+        /// </summary>
+        OnboardingQuestionDelete = 164,
+
+        /// <summary>
+        ///     Guild Onboarding was created.
+        /// </summary>
+        OnboardingCreate = 166,
+
+        /// <summary>
         ///     Guild Onboarding was updated.
         /// </summary>
         OnboardingUpdated = 167,
+
+        /// <summary>
+        ///     Guild Server Guide was created.
+        /// </summary>
+        ServerGuideCreate = 190,
+
+        /// <summary>
+        ///     Guild Server Guide was updated.
+        /// </summary>
+        ServerGuideUpdate,
 
         /// <summary>
         ///     A voice channel status was updated by a user.
