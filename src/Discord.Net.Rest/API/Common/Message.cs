@@ -104,4 +104,7 @@ internal class Message
 
     [JsonProperty("message_snapshot")]
     public Optional<MessageSnapshot[]> MessageSnapshots { get; set; }
+
+    [JsonProperty("poll")]
+    public Optional<Poll> Poll { get; set; }    
 }
