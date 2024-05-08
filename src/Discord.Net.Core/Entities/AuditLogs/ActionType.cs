@@ -259,7 +259,7 @@ namespace Discord
         /// <summary>
         ///     Guild Onboarding was deleted.
         /// </summary>
-        OnboardingQuestionDelete = 164,
+        OnboardingQuestionDelete = 165,
 
         /// <summary>
         ///     Guild Onboarding was created.
