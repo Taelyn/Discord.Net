@@ -31,10 +31,6 @@ namespace Discord
         IMessageInteractionMetadata InteractionMetadata { get; }
 
         /// <summary>
-        ///     Gets a collection of partial messages that were forwarded with this message.
-        /// </summary>
-        IReadOnlyCollection<MessageSnapshot> ForwardedMessages { get; }
-
         ///     Gets the poll sent with this message.
         /// </summary>
         /// <remarks>

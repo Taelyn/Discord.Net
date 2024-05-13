@@ -58,9 +58,6 @@ namespace Discord.WebSocket
         /// <inheritdoc />
         public MessageResolvedData ResolvedData { get; internal set; }
 
-        /// <inheritdoc />
-        public IReadOnlyCollection<MessageSnapshot> ForwardedMessages { get; internal set; }
-
         internal SocketUserMessage(DiscordSocketClient discord, ulong id, ISocketMessageChannel channel, SocketUser author, MessageSource source)
             : base(discord, id, channel, author, source)
         {
@@ -216,18 +213,8 @@ namespace Discord.WebSocket
             if (model.InteractionMetadata.IsSpecified)
                 InteractionMetadata = model.InteractionMetadata.Value.ToInteractionMetadata();
 
-
-            if (model.MessageSnapshots.IsSpecified)
-            {
-                ForwardedMessages = model.MessageSnapshots.Value.Select(x =>
-                    new MessageSnapshot(RestMessage.Create(Discord, null, null, x.Message),
-                        x.GuildId.IsSpecified ? x.GuildId.Value : null)).ToImmutableArray();
-            }
-            else
-                ForwardedMessages = ImmutableArray<MessageSnapshot>.Empty;
-
             if (model.Poll.IsSpecified)
-                Poll = model.Poll.Value.ToEntity();                
+                Poll = model.Poll.Value.ToEntity();
         }
 
         /// <inheritdoc />
